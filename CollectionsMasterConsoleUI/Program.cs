@@ -44,7 +44,7 @@ namespace CollectionsMasterConsoleUI
                 2) Second way, Create a custom method (scroll to bottom of page to find ⬇⬇⬇)
             */
 
-            Array.Reverse(numbers);
+            ReverseArray(numbers);
 
             Console.WriteLine("All Numbers Reversed:");
 
@@ -156,13 +156,12 @@ namespace CollectionsMasterConsoleUI
                     numbers[i] = 0;
              
                 }
+                              
+            }
+            NumberPrinter(numbers);
 
-                NumberPrinter(numbers);
-            } 
 
-           
 
-            
         }
 
         private static void OddKiller(List<int> numberList)
@@ -215,11 +214,13 @@ namespace CollectionsMasterConsoleUI
         {
             int start = 0;
             int end = array.Length - 1;
+
             while (start < end)
             {
                 int temp = array[start];
                 array[start] = array[end];
                 array[end] = temp;
+
                 start++;
                 end--;
     
